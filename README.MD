@@ -6,3 +6,6 @@ Running the program is as simple as executing the main python file, an example o
 ```bash
 $ python3 src/main.py
 ```
+
+## Credits
+Some of this code is adapted from <a href="https://github.com/nrsyed/sorts">nrsyed's repository</a>.
