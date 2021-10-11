@@ -1,18 +1,15 @@
-from matplotlib.container import BarContainer
-from selection_sort import selection_sort
 from random import randint
 
+from selection_sort import selection_sort
+from insertion_sort import insertion_sort
+
+from matplotlib.container import BarContainer
 import matplotlib.pyplot as plt
 import matplotlib.animation as anim
 
 
-def sort_array(array: list[int], method) -> None:
-    pass
-
-
-def get_method_name(method) -> str:
-    string: str = method.__name__
-    string_arr: list[str] = string.split("_")
+def get_method_name(method: str) -> str:
+    string_arr: list[str] = method.split("_")
     string = ""
     for s in string_arr:
         string += s.capitalize()
@@ -29,11 +26,17 @@ def get_array_as_str(array: list[int]) -> str:
     return f"[{array[0]} .. {array[len(array) - 1]}]"
 
 
-def main(method, count: int = 250) -> None:
+def main(method: str, count: int = 250) -> None:
     arr: list[int] = [  ]
     
     create_array(array=arr, length=count)
-    generator = method(array=arr)
+    
+    if method == "selection_sort":
+        gen = selection_sort(array=arr)
+    elif method == "insertion_sort":
+        gen = insertion_sort(array=arr)
+    else:
+        raise ValueError
     
     fig, ax = plt.subplots()
     ax.set_title(get_method_name(method))
@@ -51,8 +54,8 @@ def main(method, count: int = 250) -> None:
         fig=fig,
         func=update_figure,
         fargs=(bars, iteration),
-        frames=generator,
-        interval=1,
+        frames=gen,
+        interval=0.5,
         repeat=False
     )
     
@@ -60,4 +63,4 @@ def main(method, count: int = 250) -> None:
 
 
 if __name__ == "__main__":
-    main(selection_sort, 100)
+    main("selection_sort", 100)
