@@ -1,4 +1,4 @@
-# Parts of the code based on repository: https://github.com/lucs123/sorting-visualizer-matplotlib
+# Parts of this code based on repository: https://github.com/lucs123/sorting-visualizer-matplotlib
 
 import matplotlib.pyplot as plt
 from celluloid import Camera
@@ -21,5 +21,4 @@ def plot(highlight, data, other_highlights: list[int] = [  ]):
         colors[i] = "#00ff00"
     
     plt.bar(arr, data, color=colors)
-    
     camera.snap()

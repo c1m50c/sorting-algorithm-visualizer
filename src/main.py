@@ -1,6 +1,7 @@
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.quick_sort import quick_sort
+from algorithms.heap_sort import heap_sort
 
 from colorama import Style, Fore
 from animate_graph import camera
@@ -19,6 +20,7 @@ ALGORITHMS = {
     "selection_sort": selection_sort,
     "insertion_sort": insertion_sort,
     "quick_sort": quick_sort,
+    "heap_sort": heap_sort,
 }
 
 
@@ -26,6 +28,7 @@ def main():
     global interval_time
     global arr_size
     
+    # Intro #
     print(f"{Style.BRIGHT}{Fore.BLUE}Visual Sorting Algorithms{Style.RESET_ALL}")
     print(f"{Style.BRIGHT}{Fore.GREEN}Default Array Size: {Fore.RESET}{arr_size}{Style.RESET_ALL}")
     print(f"{Style.BRIGHT}{Fore.GREEN}Default Interval: {Fore.RESET}{interval_time}{Style.RESET_ALL}")
