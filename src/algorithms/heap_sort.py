@@ -11,7 +11,7 @@ def create_heap(arr: list[int], length: int, idx: int):
     if largest != idx:
         arr[idx], arr[largest] = arr[largest], arr[idx]
         create_heap(arr=arr, length=length, idx=largest)
-        plot(largest, arr)
+        plot(idx, arr, other_highlights=[largest])
 
 
 def heap_sort(arr: list[int]):

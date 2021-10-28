@@ -68,6 +68,7 @@ def main():
     # Algorithm Input Check: Check if the `algorithm_input` contains a valid algorithm, else quit. #
     if algorithm_input in ALGORITHMS.keys():
         ALGORITHMS[algorithm_input](arr)
+        plt.title(algorithm_input)
     else:
         quit()
     
