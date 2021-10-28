@@ -1,5 +1,5 @@
-# **visual-sorting-algorithms**
-Sorting Algorithm visualizer made with Python.
+# **sorting-algorithm-visualizer**
+Visualizes various sorting algorithms with Python and Matplotlib.
 
 ## **Prerequisites**
 ```bash
