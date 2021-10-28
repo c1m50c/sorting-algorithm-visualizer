@@ -4,6 +4,7 @@ from algorithms.insertion_sort import insertion_sort
 from algorithms.bubble_sort import bubble_sort
 from algorithms.quick_sort import quick_sort
 from algorithms.gnome_sort import gnome_sort
+from algorithms.shell_sort import shell_sort
 from algorithms.comb_sort import comb_sort
 from algorithms.heap_sort import heap_sort
 
@@ -27,6 +28,7 @@ ALGORITHMS = {
     "bubble_sort": [bubble_sort, "O(n * n)", "O(n * n)", "O(n)"],
     "quick_sort": [quick_sort, "O(n * n)", "O(n log n)", "O(n log n)"],
     "gnome_sort": [gnome_sort, "O(n * n)", "O(n * n)", "O(n)"],
+    "shell_sort": [shell_sort, "O(?)", "O(?)", "O(?)"],
     "comb_sort": [comb_sort, "O(n * n)", "O(n * n / 2^p)", "O(n log n)"],
     "heap_sort": [heap_sort, "O(n log n)", "O(n log n)", "O(n)"],
 }
