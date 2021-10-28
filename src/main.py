@@ -3,6 +3,7 @@ from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.bubble_sort import bubble_sort
 from algorithms.quick_sort import quick_sort
+from algorithms.gnome_sort import gnome_sort
 from algorithms.heap_sort import heap_sort
 
 # Miscellaneous Imports #
@@ -23,6 +24,7 @@ ALGORITHMS = {
     "insertion_sort": insertion_sort,
     "bubble_sort": bubble_sort,
     "quick_sort": quick_sort,
+    "gnome_sort": gnome_sort,
     "heap_sort": heap_sort,
 }
 
