@@ -1,4 +1,6 @@
 # **sorting-algorithm-visualizer**
+[![Tests](https://github.com/c1m50c/sorting-algorithm-visualizer/actions/workflows/tests.yml/badge.svg)](https://github.com/c1m50c/sorting-algorithm-visualizer/actions/workflows/tests.yml)
+
 Visualizes various sorting algorithms with Python and Matplotlib.
 
 ## **Prerequisites**
