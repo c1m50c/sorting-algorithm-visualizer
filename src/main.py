@@ -1,12 +1,14 @@
+# Algorithm Imports #
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
+from algorithms.bubble_sort import bubble_sort
 from algorithms.quick_sort import quick_sort
 from algorithms.heap_sort import heap_sort
 
+# Miscellaneous Imports #
 from colorama import Style, Fore
 from animate_graph import camera
 import matplotlib.pyplot as plt
-import numpy as np
 import random
 
 
@@ -19,6 +21,7 @@ ALGORITHMS = {
     # "algorithm_name": algorithm_function,
     "selection_sort": selection_sort,
     "insertion_sort": insertion_sort,
+    "bubble_sort": bubble_sort,
     "quick_sort": quick_sort,
     "heap_sort": heap_sort,
 }
