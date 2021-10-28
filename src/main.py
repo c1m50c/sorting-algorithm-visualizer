@@ -32,7 +32,7 @@ def main():
     global arr_size
     
     # Intro #
-    print(f"{Style.BRIGHT}{Fore.BLUE}Visual Sorting Algorithms{Style.RESET_ALL}")
+    print(f"{Style.BRIGHT}{Fore.BLUE}Sorting Algorithm Visualizer{Style.RESET_ALL}")
     print(f"{Style.BRIGHT}{Fore.GREEN}Default Array Size: {Fore.RESET}{arr_size}{Style.RESET_ALL}")
     print(f"{Style.BRIGHT}{Fore.GREEN}Default Interval: {Fore.RESET}{interval_time}{Style.RESET_ALL}")
     print(f"{Style.BRIGHT}{Fore.GREEN}Valid Algorithms: {Style.RESET_ALL}(")
