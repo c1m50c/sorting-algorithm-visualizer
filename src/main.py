@@ -1,5 +1,4 @@
 # Algorithm Imports #
-import rich
 from algorithms.selection_sort import selection_sort
 from algorithms.insertion_sort import insertion_sort
 from algorithms.bubble_sort import bubble_sort
@@ -34,7 +33,6 @@ ALGORITHMS = {
 def main():
     global interval_time
     global arr_size
-    
     console = Console()
     
     # Intro #
@@ -44,10 +42,10 @@ def main():
     
     # Algorithms Table #
     va_table = Table(title="Algorithms", title_style="bold green")
-    va_table.add_column("Input", justify="center", style="bold cyan", no_wrap=True)
-    va_table.add_column("Worst Case Time Complexity", justify="center", style="cyan", no_wrap=True)
-    va_table.add_column("Average Case Time Complexity", justify="center", style="cyan", no_wrap=True)
-    va_table.add_column("Best Case Time Complexity", justify="center", style="cyan", no_wrap=True)
+    va_table.add_column("Input", justify="full", style="bold cyan", no_wrap=True)
+    va_table.add_column("Worst Case Time Complexity", justify="full", style="cyan", no_wrap=True)
+    va_table.add_column("Average Case Time Complexity", justify="full", style="cyan", no_wrap=True)
+    va_table.add_column("Best Case Time Complexity", justify="full", style="cyan", no_wrap=True)
     for key in ALGORITHMS.keys():
         va_table.add_row(key, ALGORITHMS[key][1], ALGORITHMS[key][2], ALGORITHMS[key][3])
     console.print(va_table)
@@ -81,6 +79,7 @@ def main():
         ALGORITHMS[algorithm_input][0](arr)
         plt.title(algorithm_input)
     else:
+        console.print("[bold][red]ERROR:[/red] Specified algorithm does not exist, quitting[white]...[/white][/bold]")
         quit()
     
     # Animate #
