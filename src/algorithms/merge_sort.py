@@ -19,7 +19,6 @@ def merge(arr: list[int], left: int, middle: int, right: int):
             arr[k] = left_arr[i]
             i += 1
         k += 1
-        plot(k, arr)
     
     while i < n1:
         arr[k] = left_arr[i]
@@ -54,5 +53,6 @@ def merge_sort(arr: list[int]):
             if width > arr_len // 2:
                 middle = right - (arr_len % width)
             merge(arr=arr, left=left, middle=middle, right=right)
+            plot(middle, arr, other_highlights=[left, right])
             left += width * 2
         width *= 2
