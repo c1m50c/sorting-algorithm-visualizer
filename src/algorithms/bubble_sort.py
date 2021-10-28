@@ -15,7 +15,7 @@ def bubble_sort(arr: list[int]):
         swapped: bool = False
         for j in range(0, len(arr) - i - 1):
             if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                arr[j], arr[j + 1] = arr[j + 1], arr[j] # Swap
                 plot(i + 1, arr, other_highlights=[j + 1])
                 swapped = True
         if swapped == False:

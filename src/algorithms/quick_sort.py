@@ -12,7 +12,7 @@ def partition(arr: list[int], left: int, right: int) -> int:
         while j >= 0 and arr[j] > arr[pivot]: j -= 1
         
         if i >= j: break
-        else: arr[i], arr[j] = arr[j], arr[i]
+        else: arr[i], arr[j] = arr[j], arr[i] # Swap
         plot(pivot, arr, other_highlights=[i, j])
     
     arr[i], arr[pivot] = arr[pivot], arr[i]

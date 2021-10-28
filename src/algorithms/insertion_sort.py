@@ -14,6 +14,6 @@ def insertion_sort(arr: list[int]):
     for i in range(1, len(arr)):
         j = i
         while j > 0 and arr[j] < arr[j - 1]:
-            arr[j - 1], arr[j] = arr[j], arr[j - 1]
+            arr[j - 1], arr[j] = arr[j], arr[j - 1] # Swap
             j = j - 1
             plot(i, arr, other_highlights=[j])

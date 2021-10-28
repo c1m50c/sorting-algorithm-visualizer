@@ -31,7 +31,7 @@ ALGORITHMS = {
     "merge_sort": [merge_sort, "O(n log n)", "O(n log n)", "O(n log n)"],
     "gnome_sort": [gnome_sort, "O(n * n)", "O(n * n)", "O(n)"],
     "shell_sort": [shell_sort, "O(?)", "O(?)", "O(?)"],
-    "comb_sort": [comb_sort, "O(n * n)", "O(n * n / 2^p)", "O(n log n)"],
+    "comb_sort": [comb_sort, "O(n * n)", "O(n * n / 2^i)", "O(n log n)"],
     "heap_sort": [heap_sort, "O(n log n)", "O(n log n)", "O(n)"],
 }
 
@@ -39,45 +39,48 @@ ALGORITHMS = {
 def main():
     global interval_time
     global arr_size
-    console = Console()
     
     # Intro #
+    console = Console()
     console.print("[bold blue]Sorting Algorithm Visualizer[/bold blue]")
-    console.print(f"[bold green]Default Array Size:[/bold green] {arr_size}")
-    console.print(f"[bold green]Default Interval:[/bold green]: {interval_time}\n")
+    console.print(f"[bold][green]Default Array Size:[/green] [cyan]{arr_size}[/cyan][/bold]")
+    console.print(f"[bold][green]Default Interval:[/green] [cyan]{interval_time}ms[/cyan][/bold]\n")
     
-    # Algorithms Table #
-    va_table = Table(title="Algorithms", title_style="bold green")
-    va_table.add_column("Input", justify="full", style="bold cyan", no_wrap=True)
-    va_table.add_column("Worst Case Time Complexity", justify="full", style="cyan", no_wrap=True)
-    va_table.add_column("Average Case Time Complexity", justify="full", style="cyan", no_wrap=True)
-    va_table.add_column("Best Case Time Complexity", justify="full", style="cyan", no_wrap=True)
+    # Sorting Algorithms Table: Table displaying sorting algorithms and their time complexities. #
+    sa_table = Table(title="Sorting Algorithms", title_style="bold green", show_lines=True)
+    sa_table.add_column("Algorithm", justify="center", style="bold cyan", no_wrap=True)
+    sa_table.add_column("Worst Case Time Complexity", justify="center", style="bold red", no_wrap=True)
+    sa_table.add_column("Average Case Time Complexity", justify="center", style="bold yellow", no_wrap=True)
+    sa_table.add_column("Best Case Time Complexity", justify="center", style="bold green", no_wrap=True)
     for key in ALGORITHMS.keys():
-        va_table.add_row(key, ALGORITHMS[key][1], ALGORITHMS[key][2], ALGORITHMS[key][3])
-    console.print(va_table)
+        sa_table.add_row(key, ALGORITHMS[key][1], ALGORITHMS[key][2], ALGORITHMS[key][3])
+    console.print(sa_table)
     console.print()
     
     # Size Input: Set `arr_size` to a user-defined value. #
-    size_input: str = console.input("[bold][magenta]size[/magenta][yellow]:$[/yellow][/bold] ")
+    size_input: str = console.input("[bold][magenta]size~int[/magenta][yellow]:$[/yellow][/bold] ")
     if size_input.isdigit():
-        arr_size = int(size_input)
+        if size_input >= 1:
+            arr_size = int(size_input)
+        else:
+            console.print("[bold][red]ERROR:[/red] Specified size input is too small, using default array size.[/bold]")
     else:
         console.print("[bold][red]ERROR:[/red] Cannot convert size input to integer, using default array size.[/bold]")
     
     # Interval Input: Set `interval_time` to a user-defined value. #
-    interval_input: str = console.input("[bold][magenta]interval[/magenta][yellow]:$[/yellow][/bold] ")
+    interval_input: str = console.input("[bold][magenta]interval~ms[/magenta][yellow]:$[/yellow][/bold] ")
     if interval_input.isdigit():
         interval_time = int(interval_input)
     else:
         console.print("[bold][red]ERROR:[/red] Cannot convert interval input to integer, using default interval.[/bold]")
     
     # Algorithm Input: Get user-input for which algorithm to run. #
-    algorithm_input: str = console.input("[bold][magenta]algorithm[/magenta][yellow]:$[/yellow][/bold] ")
+    algorithm_input: str = console.input("[bold][magenta]algorithm~str[/magenta][yellow]:$[/yellow][/bold] ")
     algorithm_input = algorithm_input.lower()
     
     # Array Creation: Create array for visualization. #
     arr.clear()
-    for i in range(arr_size):
+    for _ in range(arr_size):
         arr.append(random.randint(0, arr_size))
     
     # Algorithm Input Check: Check if the `algorithm_input` contains a valid algorithm, else quit. #

@@ -12,7 +12,7 @@ def comb_sort(arr: list[int]):
         ## Complexities:
         ```py
         Worst Case Time Complexity == O(n * n)
-        Average Case Time Complexity == O(n * n / 2^p) # p = number of increments
+        Average Case Time Complexity == O(n * n / 2^i) # i = number of increments
         Best Case Time Complexity == O(n log n)
         Space Complexity == O(1)
         ```

@@ -9,7 +9,7 @@ def create_heap(arr: list[int], length: int, idx: int):
     if right < length and arr[right] > arr[largest]: largest = right
     
     if largest != idx:
-        arr[idx], arr[largest] = arr[largest], arr[idx]
+        arr[idx], arr[largest] = arr[largest], arr[idx] # Swap
         create_heap(arr=arr, length=length, idx=largest)
         plot(idx, arr, other_highlights=[largest])
 
@@ -29,5 +29,6 @@ def heap_sort(arr: list[int]):
         create_heap(arr=arr, length=len(arr), idx=i)
     
     for i in range(len(arr) - 1, 0, -1):
-        arr[i], arr[0] = arr[0], arr[i]
+        arr[i], arr[0] = arr[0], arr[i] # Swap
+        plot(-1, arr, other_highlights=[i])
         create_heap(arr=arr, length=i, idx=0)
