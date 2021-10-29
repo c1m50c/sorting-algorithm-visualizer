@@ -60,7 +60,7 @@ def main():
     # Size Input: Set `arr_size` to a user-defined value. #
     size_input: str = console.input("[bold][magenta]size~int[/magenta][yellow]:$[/yellow][/bold] ")
     if size_input.isdigit():
-        if size_input >= 1:
+        if int(size_input) >= 1:
             arr_size = int(size_input)
         else:
             console.print("[bold][red]ERROR:[/red] Specified size input is too small, using default array size.[/bold]")
