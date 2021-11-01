@@ -40,3 +40,39 @@ hightlight: int # Normally the pivot point, crucial index to be highlighted in t
 data: list # Data values for visualization, almost always the main array being sorted.
 other_highlights: list[int] = [  ] # Other crucial indexes within the main array.
 ```
+
+## **Implementing A New Algorithm**
+```py
+# algorithms/NEW_ALGORITHM.py
+
+def NEW_ALGORITHM(arr: list[int]):
+    # Note: `arr` is the list to sort, make sure your function only has this one parameter.
+    pass
+```
+
+```py
+# main.py
+
+from algorithms.NEW_ALGORITHM import NEW_ALGORITHM
+
+...
+
+ALGORITHMS = {
+    # "algorithm_name": [algorithm_function, wctc, actc, bctc],
+    "NEW_ALGORITHM": [NEW_ALGORITHM, "Time complexities", "go", "here"],
+    ...
+}
+```
+
+```py
+# test_algorithms.py
+
+from algorithms.NEW_ALGORITHM import NEW_ALGORITHM
+
+...
+
+def test_NEW_ALGORITHM():
+    arr: list[int] = [ 5, 3, 2, 1, 5 ] # Unsorted Array
+    NEW_ALGORITHM(arr)
+    assert arr == [ 1, 2, 3, 5, 5 ] # Sorted Array
+```
