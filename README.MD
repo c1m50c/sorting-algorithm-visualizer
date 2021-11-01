@@ -4,11 +4,10 @@
 
 Visualizes various sorting algorithms with Python and Matplotlib.
 
-## **Prerequisites**
+## **Installing Prerequisites**
 ```bash
-$ pip install matplotlib # For plotting.
-$ pip install celluloid # For animating the plots.
-$ pip install rich # For console coloring.
+# See `requirements.txt` for details on required packages.
+$ pip install -r requirements.txt
 ```
 
 ## **Running**
