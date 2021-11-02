@@ -1,6 +1,7 @@
 from animate_graph import plot
+from typing import List
 
-def merge(arr: list[int], left: int, middle: int, right: int):
+def merge(arr: List[int], left: int, middle: int, right: int):
     n1, n2 = middle - left + 1, right - middle
     left_arr, right_arr = [0] * n1, [0] * n2
     
@@ -31,7 +32,7 @@ def merge(arr: list[int], left: int, middle: int, right: int):
         k += 1
 
 
-def merge_sort(arr: list[int]):
+def merge_sort(arr: List[int]):
     """
         ## Complexities:
         ```py

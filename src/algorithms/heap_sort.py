@@ -1,6 +1,7 @@
 from animate_graph import plot
+from typing import List
 
-def create_heap(arr: list[int], length: int, idx: int):
+def create_heap(arr: List[int], length: int, idx: int):
     largest: int = idx
     left: int = 2 * idx + 1
     right: int = 2 * idx + 2
@@ -14,7 +15,7 @@ def create_heap(arr: list[int], length: int, idx: int):
         plot(idx, arr, other_highlights=[largest])
 
 
-def heap_sort(arr: list[int]):
+def heap_sort(arr: List[int]):
     """
     ## Complexities:
     ```py
