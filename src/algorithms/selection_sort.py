@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def selection_sort(arr: List[int]):
+def selection_sort(arr: list[int]):
     """
     ## Complexities:
     ```py

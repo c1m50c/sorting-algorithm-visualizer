@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def gnome_sort(arr: List[int]):
+def gnome_sort(arr: list[int]):
     """
     ## Complexities:
     ```py

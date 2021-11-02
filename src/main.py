@@ -10,7 +10,6 @@ from algorithms.comb_sort import comb_sort
 from algorithms.heap_sort import heap_sort
 
 # Miscellaneous Imports #
-from typing import List
 from rich.table import Table
 from rich.console import Console
 from animate_graph import camera
@@ -20,7 +19,7 @@ import random
 
 arr_size: int = 30 # Size of the visualized array.
 interval_time: int = 75 # Interval between frames.
-arr: List[int] = [  ] # Array to visualize being sorted.
+arr: list[int] = [  ] # Array to visualize being sorted.
 
 
 ALGORITHMS = {

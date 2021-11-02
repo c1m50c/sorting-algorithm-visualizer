@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def partition(arr: List[int], left: int, right: int) -> int:
+def partition(arr: list[int], left: int, right: int) -> int:
     pivot: int = right
     i, j = left - 1, right
     
@@ -20,7 +19,7 @@ def partition(arr: List[int], left: int, right: int) -> int:
     return i
 
 
-def quick_sort_lr(arr: List[int], left: int, right: int):
+def quick_sort_lr(arr: list[int], left: int, right: int):
     """
     ## Complexities:
     ```py
@@ -37,7 +36,7 @@ def quick_sort_lr(arr: List[int], left: int, right: int):
         quick_sort_lr(arr=arr, left=part+1, right=right)
 
 
-def quick_sort(arr: List[int]):
+def quick_sort(arr: list[int]):
     """
     ## Complexities:
     ```py

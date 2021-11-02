@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def bubble_sort(arr: List[int]):
+def bubble_sort(arr: list[int]):
     """
     ## Complexities:
     ```py

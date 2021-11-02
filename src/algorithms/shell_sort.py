@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def shell_sort(arr: List[int]):
+def shell_sort(arr: list[int]):
     """
         ## Complexities:
         ```py
@@ -13,7 +12,7 @@ def shell_sort(arr: List[int]):
         ```
     """
     
-    GAP_SEQUENCE: List[int] = [ 701, 301, 132, 57, 23, 10, 4, 1 ]
+    GAP_SEQUENCE: list[int] = [ 701, 301, 132, 57, 23, 10, 4, 1 ]
     
     for gap in GAP_SEQUENCE:
         for i in range(gap, len(arr)):

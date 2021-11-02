@@ -1,5 +1,4 @@
 from animate_graph import plot
-from typing import List
 
 def next_gap(gap: int) -> int:
     gap = (gap * 10) // 13
@@ -8,7 +7,7 @@ def next_gap(gap: int) -> int:
     return gap
 
 
-def comb_sort(arr: List[int]):
+def comb_sort(arr: list[int]):
     """
         ## Complexities:
         ```py

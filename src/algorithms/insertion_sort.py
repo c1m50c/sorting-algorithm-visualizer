@@ -1,7 +1,6 @@
 from animate_graph import plot
-from typing import List
 
-def insertion_sort(arr: List[int]):
+def insertion_sort(arr: list[int]):
     """
     ## Complexities:
     ```py
