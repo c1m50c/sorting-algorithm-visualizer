@@ -4,6 +4,8 @@
 
 Visualizes various sorting algorithms with Python and Matplotlib.
 
+![Preview Image](https://raw.githubusercontent.com/c1m50c/sorting-algorithm-visualizer/assets/preview.gif)
+
 ## **Installing Prerequisites**
 ```bash
 # See `requirements.txt` for details on required packages.
