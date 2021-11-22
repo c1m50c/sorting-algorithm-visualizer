@@ -1,4 +1,0 @@
-# Prerequisites
-matplotlib # Used for plotting the graphs.
-celluloid # Used for animating the graphs with ease.
-rich # Used for terminal formatting and coloring.

@@ -1,20 +1,2 @@
-# **sorting-algorithm-visualizer**
-
-[![Tests](https://github.com/c1m50c/sorting-algorithm-visualizer/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/c1m50c/sorting-algorithm-visualizer/actions/workflows/tests.yml)
-
-Visualizes various sorting algorithms with Python and Matplotlib.
-
-## **Installing Prerequisites**
-```bash
-# See `requirements.txt` for details on required packages.
-$ pip install -r requirements.txt
-```
-
-## **Running**
-```bash
-$ cd visual-sorting-algorithms # Change directory to repository's.
-$ python3 src/main.py # Run the program.
-
-Visual Sorting Algorithms
-...
-```
+# **sorting-algorithm-visualizer** | Assets
+Side branch containing assets for the `main` branch's `README.MD` or any other type of preview item for the repository.
