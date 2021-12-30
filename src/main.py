@@ -10,11 +10,11 @@ from algorithms.comb_sort import comb_sort
 from algorithms.heap_sort import heap_sort
 
 # Miscellaneous Imports #
+from random import randint
 from rich.table import Table
 from rich.console import Console
 from animate_graph import camera
 import matplotlib.pyplot as plt
-import random
 
 
 arr_size: int = 30 # Size of the visualized array.
@@ -81,7 +81,7 @@ def main():
     # Array Creation: Create array for visualization. #
     arr.clear()
     for _ in range(arr_size):
-        arr.append(random.randint(0, arr_size))
+        arr.append(randint(0, arr_size))
     
     # Algorithm Input Check: Check if the `algorithm_input` contains a valid algorithm, else quit. #
     if algorithm_input in ALGORITHMS.keys():
@@ -94,6 +94,7 @@ def main():
     # Animate #
     animation = camera.animate(interval=interval_time)
     plt.show()
+    main()
 
 
 if __name__ == "__main__":
